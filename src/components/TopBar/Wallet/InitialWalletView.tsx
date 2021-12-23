@@ -1,15 +1,5 @@
 import { Component, ReactElement, useState } from "react";
-import {
-  useTheme,
-  makeStyles,
-  withStyles,
-  SvgIcon,
-  Button,
-  Typography,
-  Box,
-  Divider,
-  IconButton,
-} from "@material-ui/core";
+import { useTheme, withStyles, SvgIcon, Button, Typography, Box, Divider, IconButton } from "@material-ui/core";
 import { Skeleton } from "@material-ui/lab";
 import { ReactComponent as CloseIcon } from "src/assets/icons/x.svg";
 import { ReactComponent as ArrowUpIcon } from "src/assets/icons/arrow-up.svg";
@@ -18,16 +8,13 @@ import { ReactComponent as fraxTokenImg } from "src/assets/tokens/FRAX.svg";
 import { ReactComponent as daiTokenImg } from "src/assets/tokens/DAI.svg";
 import { ReactComponent as wsOhmTokenImg } from "src/assets/tokens/token_wsOHM.svg";
 import { ReactComponent as arrowDown } from "src/assets/icons/arrow-down.svg";
-import { addresses, TOKEN_DECIMALS } from "src/constants";
 import { formatCurrency } from "src/helpers";
 import { useAppSelector, useWeb3Context } from "src/hooks";
 import useCurrentTheme from "src/hooks/useTheme";
 
 import { ohm_frax, ohm_dai } from "src/helpers/AllBonds";
 
-import { IToken, Token, Tokens, useWallet } from "./Token";
-import { NetworkID } from "src/lib/Bond";
-import { BigNumber } from "ethers";
+import { IToken, Tokens, useWallet } from "./Token";
 
 const Borrow = ({
   Icon1,
